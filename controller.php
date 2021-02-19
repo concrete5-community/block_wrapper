@@ -10,7 +10,7 @@ final class Controller extends Package
 {
     protected $pkgHandle = 'block_wrapper';
     protected $appVersionRequired = '8.0';
-    protected $pkgVersion = '1.0';
+    protected $pkgVersion = '1.0.1';
     protected $pkgAutoloaderRegistries = [
         'src/BlockWrapper' => '\A3020\BlockWrapper',
     ];
