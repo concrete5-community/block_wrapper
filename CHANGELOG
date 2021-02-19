@@ -1,3 +1,7 @@
+1.0
+- Approved by PRB.
+- Prevent unclosed wrappers in 8.4.0+.
+
 0.9.4
 - Remove URI 'edit_block_popup' check. It's not used in modern concrete5, and was a left-over from the legacy version.
 

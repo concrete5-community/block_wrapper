@@ -18,7 +18,8 @@ class Element
     /**
      * @return string
      */
-    public function open()
+    public function
+    open()
     {
         return '<' . $this->tag . $this->renderAttributes() . '>';
     }

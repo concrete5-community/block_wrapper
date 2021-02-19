@@ -2,6 +2,7 @@
 
 namespace Concrete\Package\BlockWrapper;
 
+use A3020\BlockWrapper\Provider\ServiceProvider;
 use Concrete\Core\Block\BlockType\BlockType;
 use Concrete\Core\Package\Package;
 
@@ -9,7 +10,7 @@ final class Controller extends Package
 {
     protected $pkgHandle = 'block_wrapper';
     protected $appVersionRequired = '8.0';
-    protected $pkgVersion = '0.9.4';
+    protected $pkgVersion = '1.0';
     protected $pkgAutoloaderRegistries = [
         'src/BlockWrapper' => '\A3020\BlockWrapper',
     ];
@@ -22,6 +23,13 @@ final class Controller extends Package
     public function getPackageDescription()
     {
         return t('Wrap one or more blocks in a container element.');
+    }
+
+    public function on_start()
+    {
+        /** @var ServiceProvider $provider */
+        $provider = $this->app->make(ServiceProvider::class);
+        $provider->register();
     }
 
     public function install()
